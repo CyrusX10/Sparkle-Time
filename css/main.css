@@ -1,0 +1,1086 @@
+/* this is for the entire page */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+/* for smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
+/* styling for navbar */
+nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 252, 68); 
+    overflow: visible;
+    z-index: 100;
+    top: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 40px 40px;
+    position: relative;
+    bottom: 17px;
+    right: 250px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+nav ul li a{
+    color:black;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color:  black;
+    font-size: 110%;
+}
+
+/* size and position of logo */
+.logo {
+  width: 160px;
+  height: 80px;
+  position:relative;
+  right: 200px;
+  bottom: 4px;
+}
+
+.cart{
+    width:30px;
+    height : 30px;
+    position: fixed;
+    
+    top:15px;
+    bottom:auto;
+}
+.icon{
+  width:30px;
+    height : 30px;
+    position: fixed;
+    
+    top:15px;
+    bottom:auto;
+}
+    /* CSS for login icon hover effect */
+ .icon{
+  transition: transform 0.5s ease-in;
+}
+
+.icon:hover {
+  transform: rotate(360deg);
+}
+
+.firstsection{
+    
+    background:rgb(255, 252, 68);
+    top: 10px;
+    width:100%;
+    height: 500px;
+  align-items: center;
+  display: flex;
+  
+
+    
+}
+
+section div h1 span{
+    color:rgb(255, 179, 0);
+}
+
+.righthome img{
+    position:relative;
+    align-items: end;
+    height: 400px;
+    width: 380px;
+    display: flex;
+    left: 200px;
+    top: 10px;
+
+}
+.righthome {
+  position: relative;
+  top: 10px;
+  justify-content: flex-end;
+  width: 25%;
+  display: flex;
+}
+
+.lefthome p {
+  position: relative;
+  display: flex;
+}
+
+
+.shop_more{
+    display:flex;
+    left: 700px;
+    top: 100px;
+    position: relative;
+}
+.shop_more button{
+    border-radius: 12px;
+    background-color:rgb(255, 180, 11);
+    border: none;
+    color: whitesmoke;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 1px;
+    cursor: pointer;
+}
+.textbutton p {
+  color: rgb(255, 180, 11);
+  font-size: 13px;
+  text-shadow: 2px 2px 2px rgba(255, 180, 11, 0.5);
+}
+
+.connect img{
+  height: 150px;
+  padding: 2px;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+.logosfooter img{
+    height: 40px;
+    padding: 20px;
+    padding-left: 30px;
+    margin-left: 20px;
+}
+.connect h1{
+    color: rgb(255, 180, 11);
+    font-size: 25px;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.information ul li a:hover{
+    font-size: 110%;
+    color: rgb(255, 227, 11);
+}
+
+/*css for login page*/
+
+.container{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background:whitesmoke;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px whitesmoke;
+  perspective: 2700px;
+  margin: 100px;
+}
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.container #flip:checked ~ .cover{
+  transform: rotateY(-180deg);
+}
+ .container .cover .front,
+ .container .cover .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.cover .back{
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.container .cover::before,
+.container .cover::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: 12;
+}
+.container .cover::after{
+  opacity: 0.3;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.container .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+.container .cover .text{
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .text .text-1,
+.cover .text .text-2{
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.cover .text .text-2{
+  font-size: 20px;
+  font-weight: 250;
+}
+.container .forms{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.container .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: goldenrod;
+}
+.forms .signup-form  .title:before{
+  width: 20px;
+}
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: goldenrod;
+}
+.form-content .input-box i{
+  position: absolute;
+  color: goldenrod;
+  font-size: 17px;
+}
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .text a{
+  text-decoration: none;
+}
+.forms .form-content .text a:hover{
+  text-decoration: underline;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: #fff;
+  background:goldenrod;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forms .form-content .button input:hover{
+  background: goldenrod;
+}
+.forms .form-content label{
+  color: goldenrod;
+  cursor: pointer;
+}
+.forms .form-content label:hover{
+  text-decoration: underline;
+}
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+.container #flip{
+  display: none;
+}
+@media (max-width: 730px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
+
+/* Css for home page*/
+body{
+  background-color: whitesmoke;
+}
+.secondpart{
+  display: flex;
+  position: relative;        
+  background-color:whitesmoke;
+  top: 100px;
+  left: 0px;
+  padding-bottom: 100px;
+  padding-top: 100px;;
+}
+/* styling for the featured products of home page */
+
+.featuredproducts p{
+  position: relative;
+  display: flex;
+  top: 20px;
+  color: lightslategrey;
+  line-height:25px;
+}
+.moreproducts{
+  padding-top: 35px;
+  padding-left: 10px;
+
+  position: relative;
+}
+.featuredproducts{
+  display: flow-root;
+  position: relative;
+  left: 5px;
+  
+  padding: 40px;
+  left: 20px;
+}
+.featuredproducts h1{
+  font-size: 11px;
+  font-weight: lighter;
+}
+.featuredproducts p{
+  position: relative;
+  display: flex;
+  top: 20px;
+  color: lightslategrey;
+  line-height:25px;
+}
+/* styling and assigning flex and  padding to the third part */
+.thirdpart{
+  display: flex;
+  padding: 50px;
+  padding-top: 200px;
+  top: 300px;
+  
+}
+.textblog{
+  padding: 30px;
+}
+.textblog h1{
+  font-size: 11px;
+  font-weight: lighter;
+}
+/* styling for about us section */
+
+.fourthpart{
+  padding: 50px;
+  display: flex;
+  
+}
+.aboutustext{
+  
+  position: relative;
+}
+.aboutuspicture{
+ 
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  
+}
+.aboutblock{
+  display: flex;
+  padding: 20px;
+
+ 
+}
+.objectabout{
+      padding: 20px;
+  }
+
+/* Css for product page*/
+
+#countdown {
+    text-align: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #333;
+    margin: 50px auto;
+  }
+  
+  #countdown .days,
+  #countdown .hours,
+  #countdown .minutes,
+  #countdown .seconds {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px #ccc;
+  }
+  
+  #countdown p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #countdown .timeRefDays,
+  #countdown .timeRefHours,
+  #countdown .timeRefMinutes,
+  #countdown .timeRefSeconds {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-top: 5px;
+  }
+  .product-container {
+          display: flex;
+          
+        }
+        .productheading{
+          text-align: center;
+          padding: 50px; 
+          color: rgb(255, 180, 11);
+        }
+        .product {
+          width: 250px;
+          height: 326px;
+          position: relative;
+          overflow: hidden;
+          padding: 35px;
+          box-shadow: 10px 10px 10px 10px rgb(228, 230, 233);
+        }
+        .product img {
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          transition: all 0.5s ease;
+        }
+        .product .info {
+          position: absolute;
+          bottom: -100%;
+          left: 0;
+          right: 0;
+          background-color:whitesmoke;
+          padding: 10px;
+          transition: all 0.5s ease;
+        }
+        .product:hover img {
+          transform: scale(1.1);
+        }
+        .product:hover .info {
+          bottom: 0;
+        }
+        .product-price {
+          color: #333;
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        .product-discounted-price {
+          color: #aaa;
+          font-size: 16px;
+          text-decoration: line-through;
+          margin-left: 10px;
+        }
+        .productname{
+          padding-bottom: 20px;
+        }
+        .productname p{
+          font-weight: bold;
+          color: grey;
+          font-size: larger;
+          padding: 10px;
+          padding-left: 30px;
+        }
+        .allbutton{
+          width: 70px;
+          border-radius: 12px;
+          background-color:rgb(255, 180, 11);
+          border: none;
+          color: whitesmoke;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-family: 'Times New Roman', Times, serif;
+          text-align: center;
+          text-decoration: none;
+          display: block;
+          font-size: 16px;
+          margin: 4px 1px;
+          cursor: pointer;
+         
+      }
+      .allbutton:hover{
+          color:whitesmoke;
+          background-color: rgb(244, 195, 81);
+          
+  
+      }
+/* Css for blog page*/
+.post-wrapper a:hover {
+  color: rgb(255, 180, 11);
+}
+.post:hover {
+  transform: scale(1.1);
+}
+.post-slider {
+  border: none;
+}
+.post-slider .slider-title{
+  margin: 20px;
+  color: rgb(255, 180, 11);
+  padding: 20px 20px;
+  text-align: center;
+}
+.post-slider .post-wrapper {
+  width: 80%;
+  height: 350px;
+  margin: 0px auto;
+  padding: 16px 0px 16px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.post-slider .post-wrapper .post {
+  width: 350px;
+  height: 340px;
+  margin: 1px 20px;
+  background: whitesmoke;
+  display: inline-block;
+  box-shadow: 16px 16px 16px 16px whitesmoke;
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
+.post-slider .post-wrapper .post .post-info {
+  height: 90px;
+  padding: 0px 16px;
+}
+.post-slider .post-wrapper .post .slider-image {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+/* Css for blogpost page*/
+.head {
+  margin: 25px;
+  color: rgb(255, 180, 11);
+  padding: 20px 20px;
+  text-align:center;
+}
+.container {
+  width: 80%;
+  text-align: left;
+  padding: 20px;
+  margin: 120px auto;
+  background-color: whitesmoke;
+  border-radius: 5px 5px 5px 5px;
+}
+.footer {
+  background-color: whitesmoke;
+}
+p {
+  font-size: 20px;
+  color: rgb(146, 108, 19);
+}
+/* Css for about page*/
+.body{
+  padding: 0;
+  margin:0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#ffff;
+  }
+.aboutsectionfirst{
+  padding-top: 100px;
+  padding-left:80px;
+  padding-right:80px;
+  border-top-right-radius: 10% 10%;
+  background-color: whitesmoke;
+  top: 100px;
+  width:80%;
+  height: 300px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  }
+.aboutsectionfirst h1{
+  height: 40%;
+  color:rgb(255, 180, 11);
+  }
+.aboutsectionsecond{
+  padding-bottom: 100px;
+  padding-left: 80px;
+  padding-right:80px;
+  background-color: whitesmoke;
+  width:80%;
+  height: 1000px;
+  align-items: center;
+  text-align:center;
+  }
+.slider{
+  width:1000px;
+  height:500px;
+  border-radius:20px;
+  overflow: hidden;
+  padding-right: 100px;
+  }
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+  }
+.slides input{
+  display:none;
+  padding: 100px;
+  }
+.slide{
+  width:60%;
+  transition:2s;
+  }
+.slide img{
+  width: 600px;
+  height: 500px;
+  }
+.navigation-manual{
+  position: absolute;
+  width: 900px;
+  margin-top:-40px;
+  display: flex;
+  justify-content: center;
+  }
+.manual-button{
+  border: 2px solid rgb(255, 180, 11);
+  padding: 5px;
+  border-radius:10px;
+  cursor: pointer;
+  transition: 1s;
+  }
+.manual-button:not(:last-child){
+  margin-right: 40px;
+  }
+.manual-button:hover{
+  background:rgb(243, 199, 98);
+  }
+#radio1:checked~.first{
+  margin-left: 0px;
+  }
+#radio2:checked~.first{
+  margin-left: -35%;
+  }
+#radio3:checked~.first{
+  margin-left: -102%;
+  }
+#radio4:checked~.first{
+  margin-left: -182%;
+  }
+.aboutmembers{
+  display: flex;
+      position: relative;
+      left: 5px;
+      padding: 40px;
+      left: 20px;
+  }
+.aboutmembers h1{
+  font-size:30px;
+  height:100px;
+  width:250px;
+  margin-left:50px;
+  }
+.aboutmembers p{
+  font-family: monospace;
+  font-size:15px;
+  width:250px;
+  margin-left:50px;
+  }
+.learnmore button{
+  border-radius: 12px;
+      background-color:rgb(255, 180, 11);
+      border: none;
+      color: whitesmoke;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      margin: 4px 1px;
+      cursor: pointer;
+      margin-left:50px;
+      
+  }
+.learnmore button:hover{
+      color:whitesmoke;
+      background-color: rgb(243, 199, 98);
+  }
+.blurbackground img{
+  transition: .3s;
+  }
+.blurbackground:hover img{
+  filter:blur(3px) brightness(80%);
+}
+.aboutsectionlast{
+  padding-bottom: 100px;
+  padding-left:80px;
+  padding-right:80px;
+  background-color: whitesmoke;
+  width:80%;
+  height: 800px;
+  align-items: center;
+  }
+  /*css for all portfolio page*/
+  .salutation {
+    padding-top:0px;
+    margin-left:8%;
+    margin-top: 15%
+  }
+  .salutation h1{
+    font-size: 50px;
+    margin-bottom:20px;
+    text-align: left;
+  }
+  .salutation p{
+    color:grey;
+    line-height:22px;
+  }
+.span {
+    color: rgb(255, 180, 11);
+}
+.salutation a{
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 180, 11);
+  display:inline-block;
+  margin:30px 0;  
+}
+.salutation button{
+    border-radius: 12px;
+        background-color:rgb(255, 180, 11);
+        border: none;
+        color: whitesmoke;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 4px 1px;
+        cursor: pointer;
+        margin-left:50px;
+}
+.salutation button:hover{
+        color:whitesmoke;
+        background-color: rgb(255, 215, 120);
+}
+.images{
+  width: 45%;
+  height:80%;
+  position:absolute;
+  bottom:0;
+  right: 100px;
+}
+.images  img{
+  padding-top:-200px;
+  height:100%;
+  position:absolute;
+  left:50%;
+  bottom: 0;
+  transform:translateX(-50%);
+  transition:bottom 1s, left 1s;
+  border-radius:100%;
+  margin-top: -100px;
+}
+.CV{
+  padding-top:500px;
+  width:200px;
+  position: absolute;
+  position: flex;
+  height:200px;
+  text-align: center;
+  padding-left:200px;
+}
+.first h1{
+  font-size:40px;
+  color:rgb(255, 180, 11);
+}
+.first p{
+  margin-top:50px;
+  width:400px;
+
+}
+.second{
+  width:400px;
+  margin-left:750px;
+  margin-top:-230px;
+}
+.second h1{
+  font-size:40px;
+  color: rgb(255, 180, 11);
+}
+.second p{
+  margin-top:50px;
+}
+.third{
+  margin-top: 250px;
+  width:400px;
+  margin-left:-100px;
+}
+.third h1{
+  font-size:40px;
+  color:rgb(255, 180, 11);
+}
+.fourth{
+  margin-left:750px;
+  margin-top:-130px;
+  width:400px;
+}
+.fourth h1{
+  font-size:40px;
+  color: rgb(255, 180, 11);
+}
+.fifth{
+  margin-top: 150px;
+  margin-left:325px;
+  width:400px;
+  height:200px;
+}
+.fifth h1{
+  font-size:40px;
+  color:rgb(255, 180, 11);
+}
+.fifth img{
+  height:20px;
+  width: 20px;
+}
+.return-button{
+  margin-left:-200px;
+  margin-top: -200px;
+}
+.return-button button{
+  border-radius: 12px;
+        background-color:rgb(255, 180, 11);
+        border: none;
+        color: whitesmoke;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 4px 1px;
+        cursor: pointer;
+        margin-left:50px;
+}
+.return-button button:hover{
+        color:whitesmoke;
+        background-color: rgb(252, 212, 119);
+}
+/* Css for contact page*/
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.send-message-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: goldenrod;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-message-btn:hover {
+  background-color: #d4af37;
+}
+/* Media query for responsiveness */
+@media only screen and (max-width: 1024px) {
+  /* Adjustments for navbar */
+  nav {
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  
+  .logo {
+      width: 120px;
+      height: 60px;
+      right: 100px;
+  }
+
+  nav ul li {
+      padding: 40px 20px;
+      right: 150px;
+  }
+
+  /* Adjustments for cart and icon */
+  .cart, .icon {
+      width: 20px;
+      height: 20px;
+      top: 20px;
+  }
+
+  /* Adjustments for home page */
+  .shop_more {
+      left: 500px;
+  }
+
+  /* Adjustments for about page */
+  .slider {
+      width: 700px;
+  }
+  
+  .learnmore button {
+      margin-left: 20px;
+  }
+
+  /* Adjustments for portfolio page */
+  .salutation {
+      margin-left: 5%;
+  }
+
+  .images {
+      width: 40%;
+      right: 50px;
+  }
+
+  .images img {
+      left: 40%;
+  }
+
+  .CV {
+      padding-left: 100px;
+  }
+
+  .second {
+      margin-left: 500px;
+  }
+
+  .third {
+      width: 300px;
+      margin-left: 0;
+  }
+
+  .fourth {
+      margin-left: 500px;
+  }
+
+  .fifth {
+      margin-left: 200px;
+  }
+
+  .return-button {
+      margin-left: -100px;
+  }
+}
